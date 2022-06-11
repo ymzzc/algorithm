@@ -92,8 +92,12 @@ public class TwoWayLinkList<T> implements Iterable<T> {
     // 想i处添加元素
 
     public boolean insert(int index, T t) {
-        if (index >= N || index < 0) {
+        if (index > N || index < 0) {
             throw new ArrayIndexOutOfBoundsException();
+        }
+        if (index == N){
+            insert(t);
+            return true;
         }
         // 前一个节点
         Node pre = first;

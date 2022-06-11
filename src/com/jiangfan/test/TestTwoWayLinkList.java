@@ -16,6 +16,7 @@ public class TestTwoWayLinkList {
         list.insert("刘六");
         list.remove(1);
         list.insert(1, "七仙女");
+        list.insert(4, "八仙");
         for (String s : list) {
             System.out.println(s);
         }
