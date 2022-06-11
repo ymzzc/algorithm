@@ -23,5 +23,10 @@ public class TestTwoWayLinkList {
         System.out.println("======================================");
         System.out.println("第一个节点" + list.getFirst());
         System.out.println("最后一个节点" + list.getLast());
+        System.out.println("======================================");
+        list.reverse();
+        for (String s : list) {
+            System.out.println(s);
+        }
     }
 }

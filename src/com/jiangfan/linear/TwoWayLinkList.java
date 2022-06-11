@@ -179,4 +179,29 @@ public class TwoWayLinkList<T> implements Iterable<T> {
             return node.item;
         }
     }
+    
+    public void reverse(){
+        if (isEmpty()){
+            return;
+        }
+        reverse(first.next);
+    }
+    
+    public Node reverse(Node node){
+        //已经到了最后一个元素
+        if (node.next==null){
+            //反转后，头结点应该指向原链表中的最后一个元素
+            first.next=node;
+            return node;
+        }
+        // 当前节点的上一节点
+        Node pre = reverse(node.next);
+        
+        // 下一节点的后继节点置未node
+        pre.next = node;
+        // node 的下一节点置为 null;
+        node.next = null;
+        
+        return node;
+    }
 }
