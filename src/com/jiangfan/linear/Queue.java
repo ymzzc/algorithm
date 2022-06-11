@@ -87,9 +87,8 @@ public class Queue<T> implements Iterable<T> {
 
         @Override
         public T next() {
-            Node node = n.next;
             n = n.next;
-            return node.item;
+            return n.item;
         }
     }
 
