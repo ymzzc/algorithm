@@ -3,6 +3,8 @@ package com.jiangfan.linear;
 import java.util.Iterator;
 
 /**
+ * 栈 先进后出FILO
+ *
  * @author jiangfan
  * @version 1.0
  * @CreateTime 2022-06-11  19:26
@@ -17,7 +19,7 @@ public class Stack<T> implements Iterable<T> {
         head = new Node(null, null);
         N = 0;
     }
-    
+
     // 节点类
     private class Node {
         public T item;
@@ -28,6 +30,7 @@ public class Stack<T> implements Iterable<T> {
             this.next = next;
         }
     }
+
     //判断当前栈中元素个数是否为0
     public boolean isEmpty() {
         return N == 0;
@@ -80,7 +83,5 @@ public class Stack<T> implements Iterable<T> {
             return node.item;
         }
     }
-
-    
 
 }
